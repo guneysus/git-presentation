@@ -1,41 +1,526 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Git-presentation by guneysus</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Git-presentation</h1>
-        <p></p>
-
-        <p class="view"><a href="https://github.com/guneysus/git-presentation">View the Project on GitHub <small>guneysus/git-presentation</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/guneysus/git-presentation/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/guneysus/git-presentation/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/guneysus/git-presentation">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>...</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/guneysus">guneysus</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <title>1. Getting Started</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|PT+Mono' rel='stylesheet' type='text/css'>
+    <!-- Styles -->
     
-  </body>
+    <link rel="stylesheet" media="print" href="/Library/Python/2.7/site-packages/landslide-1.1.1-py2.7.egg/landslide/themes/ribbon/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="/Library/Python/2.7/site-packages/landslide-1.1.1-py2.7.egg/landslide/themes/ribbon/css/screen.css">
+    
+    
+    <!-- /Styles -->
+</head>
+<body class="list">
+    
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>1. Getting Started</h1></header>
+                
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h2>About Version Control</h2></header>
+                
+                
+                    <section class="slide-content"><p>What is version control, and why should you care? Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. </p>
+<ul>
+<li>Local Version Control Systems
+Many people’s version-control method of choice is to copy files into another directory (perhaps a time-stamped directory, if they’re clever). This approach is very common because it is so simple, but it is also incredibly error prone. It is easy to forget which directory you’re in and accidentally write to the wrong file or copy over files you don’t mean to.￿</li>
+</ul></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Local version control diagram</h3></header>
+                
+                
+                    <section class="slide-content"><p><img alt="Figure 1-1. Local version control diagram." src="img/local_vcs.png" /></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Centralized Version Control Systems</h3></header>
+                
+                
+                    <section class="slide-content"><p><img alt="Figure 1-2. Centralized version control diagram." src="img/central_vcs.png" /></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>2. Git Basics</h1></header>
+                
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Simple Actions for Git</h3></header>
+                
+                
+                    <section class="slide-content"><p><strong>Committed</strong> means that the data is safely stored in your local database.</p>
+<p><strong>Modified</strong> means that you have changed the file but have not committed it to your database yet.</p>
+<p><strong>Staged</strong> means that you have marked a modified file in its current version to go into your next commit snapshot.</p>
+<p>The basic Git workflow goes something like this:</p>
+<ol>
+<li>You modify files in your working directory.</li>
+<li>You stage the files, adding snapshots of them to your staging area.</li>
+<li>You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.</li>
+</ol></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h2>Initializing a Repository in an Existing Directory</h2></header>
+                
+                
+                    <section class="slide-content"><p>This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. </p>
+<p><code>$ git init</code></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h2>Cloning an Existing Repository</h2></header>
+                
+                
+                    <section class="slide-content"><p>You clone a repository with git clone <code>[url]</code>. For example, if you want to clone the Ruby Git library called Grit, you can do so like this:</p>
+<p><code>$ git clone git://github.com/schacon/grit.git</code></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h2>Recording Changes to the Repository</h2></header>
+                
+                
+                    <section class="slide-content"><p><img alt="Figure 2-1. The lifecycle of the status of your files." src="img/lifecycle.png" /></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Removing Files</h3></header>
+                
+                
+                    <section class="slide-content"><p><code>$ git rm dosyamiz.txt</code></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Moving Files</h3></header>
+                
+                
+                    <section class="slide-content"><p>Unlike many other VCS systems, Git doesn’t explicitly track file movement. </p>
+<p><code>$ git mv file_from file_to</code></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h2>2.3 Git Basics - Viewing the Commit History</h2></header>
+                
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Viewing the Commit History</h3></header>
+                
+                
+                    <section class="slide-content"><p><code>$ git log</code></p>
+<p>By default, with no arguments, git log lists the commits made in that repository in reverse chronological order. That is, the most recent commits show up first. </p>
+<p>One of the more helpful options is -p, which shows the diff introduced in each commit. You can also use -2, which limits the output to only the last two entries:</p>
+<p><code>$ git log -p -2</code></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Viewing the Commit History</h3></header>
+                
+                
+                    <section class="slide-content"><p>For example, if you want to see some abbreviated stats for each commit, you can use the --stat option:</p>
+<p><code>$ git log --stat</code></p>
+<p><code>$ git log --stat</code></p>
+<p>As you can see, the --stat option prints below each commit entry a list of modified files, how many files were changed, and how many lines in those files were added and removed. It also puts a summary of the information at the end.</p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Viewing the Commit History</h3></header>
+                
+                
+                    <section class="slide-content"><p>Another really useful option is <code>--pretty.</code> This option changes the log output to formats other than the default. A few prebuilt options are available for you to use. The oneline option prints each commit on a single line, which is useful if you’re looking at a lot of commits. </p>
+<p>In addition, the short, full, and fuller options show the output in roughly the same format but with less or more information, respectively:</p>
+<p><code>$ git log --pretty=oneline</code></p>
+<p><code>$ git log --pretty=format:"%h - %an, %ar : %s"</code></p>
+<pre><code>ca82a6d - Scott Chacon, 11 months ago : changed the version number
+085bb3b - Scott Chacon, 11 months ago : removed unnecessary test code
+a11bef0 - Scott Chacon, 11 months ago : first commit
+</code></pre></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h4>FORMAT OPTIONS</h4></header>
+                
+                
+                    <section class="slide-content"><pre><code> Option  Description of Output
+ %H  Commit hash
+ %h  Abbreviated commit hash
+ %T  Tree hash
+ %t  Abbreviated tree hash
+ %P  Parent hashes
+ %p  Abbreviated parent hashes
+ %an Author name
+ %ae Author e-mail
+ %ad Author date (format respects the --date= option)
+ %ar Author date, relative
+ %cn Committer name
+ %ce Committer email
+ %cd Committer date
+ %cr Committer date, relative
+ %s  Subject
+</code></pre></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Using a GUI to Visualize History</h3></header>
+                
+                
+                    <section class="slide-content"><p><img alt="Figure 2-2. The gitk history visualizer." src="img/gitk.png" /></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h2>Working with Remotes</h2></header>
+                
+                
+                    <section class="slide-content"><p>To be able to collaborate on any Git project, you need to know how to manage your remote repositories. </p>
+<p>Remote repositories are versions of your project that are hosted on the Internet or network somewhere. </p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Showing Your Remotes</h3></header>
+                
+                
+                    <section class="slide-content"><p><code>$ git remote -v</code></p>
+<pre><code>origin  git://github.com/schacon/ticgit.git (fetch)
+origin  git://github.com/schacon/ticgit.git (push)
+</code></pre></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Adding Remote Repositories</h3></header>
+                
+                
+                    <section class="slide-content"><p>To add a new remote Git repository as a shortname you can reference easily, run git remote add [shortname] [url]:</p>
+<pre><code>$ git remote
+origin
+$ git remote add pb git://github.com/paulboone/ticgit.git
+$ git remote -v
+origin  git://github.com/schacon/ticgit.git
+pb  git://github.com/paulboone/ticgit.git
+</code></pre></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Fetching and Pulling from Your Remotes</h3></header>
+                
+                
+                    <section class="slide-content"><pre><code>$ git fetch [remote-name]
+</code></pre>
+<p>It’s important to note that the fetch command pulls the data to your local repository — it doesn’t automatically merge it with any of your work or modify what you’re currently working on. You have to merge it manually into your work when you’re ready.</p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h3>Pushing to Your Remotes</h3></header>
+                
+                
+                    <section class="slide-content"><pre><code>$ git push origin master
+</code></pre>
+<p>This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. </p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>SUMMARY</h1></header>
+                
+                
+                    <section class="slide-content"><ol>
+<li><strong>INIT</strong> a Repository on the local machine  or <strong>CLONE</strong> a Repository on the remote server</li>
+<li><strong>ADD</strong> and/or edit some files from local working directory.</li>
+<li><strong>STAGE</strong> -&gt; <strong>COMMIT</strong> the changes </li>
+<li>Repeat 3rd step many times.</li>
+<li>Review your local <strong>COMMITS</strong></li>
+<li><strong> PUSH </strong> to remote server to send your local changes.</li>
+<li><strong> FETCH </strong> changes that made by other users.</li>
+<li>Turn to 2nd step.</li>
+</ol></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source:  -->
+        <section class="slide">
+            <div>
+                
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: presentation.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>3. Git Branching</h1></header>
+                
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source:  -->
+        <section class="slide">
+            <div>
+                
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+    <!-- Javascripts -->
+        
+        <script type="text/javascript" src="/Library/Python/2.7/site-packages/landslide-1.1.1-py2.7.egg/landslide/themes/ribbon/js/slides.js"></script>
+        
+        
+    <!-- /Javascripts -->
+
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
 </html>
