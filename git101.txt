@@ -1,0 +1,167 @@
+
+
+
+
+##Ahmed Seref Guneysu
+
+
+
+
+
+
+
+About Version Control
+
+What is version control, and why should you care? Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. 
+
+Local Version Control Systems
+
+Many people’s version-control method of choice is to copy files into another directory (perhaps a time-stamped directory, if they’re clever). This approach is very common because it is so simple, but it is also incredibly error prone. It is easy to forget which directory you’re in and accidentally write to the wrong file or copy over files you don’t mean to.￿
+
+
+
+What is Git?
+
+Git is an open source, distributed version control system designed for speed an efficiency.
+
+
+
+Github.com?
+
+Github.com is an web application and code hosting provider for easy use and
+collaboration.
+
+Github provides also 
+
+
+Easy web page publishing for projects or person/organizations
+Guneysus Presentation
+Wikipage for projects.
+Issues page for bug/feature tracking
+Useful graphs for the software project managements.
+Integrating with hundreds of web application including   Redmine
+
+
+
+
+Git Basics
+
+Getting a Repo
+
+
+
+Create an empty repo
+
+
+Github for Mac
+
+
+Source tree [Mac]
+
+Or command line
+git init
+
+
+
+Cloning a Repository
+
+
+
+Clone
+
+an existing repository
+
+on the anywhere that you have permission to read.
+
+git clone https://github.com/careitu/git-presentation.git
+
+git clone git@github.com:careitu/git-presentation.git
+
+These two addressed nearly the same and if you want to push your work to this
+repo, you must use these addresses.
+
+Third one is the read-only. 
+git clone git://github.com/careitu/git-presentation.git
+
+
+
+or Clone
+
+via Graphical User Interface
+
+ 
+
+
+
+
+or Fork
+
+an existing repo on [Github]
+
+
+
+
+
+Add files to the working directory
+
+touch new_file.txt
+
+git add new_file.txt
+
+
+
+Or Add files with Github GUI
+
+Or your Git GUI (Source tree, Github for Mac, Github for Windows, etc)
+will recognize files that are not added to your working directory.
+
+
+
+Commit the changes
+
+
+
+Commit
+
+Means that you approve your work and merge your changes to your repository.
+
+If you have done your local work, 
+You can commit the changes with descriptive message.
+
+It is recommended that you finished a small task of your project, then commit.
+Do not Commit if you changed flie to file
+
+
+
+Commit and Add with Github GUI
+
+With Github you can commit and add new files at the same dialog.
+
+
+
+
+
+Summary
+
+
+Init/Clone/Fork a repo to your computer
+Edit/Add some files to your working directory.
+Review your changes.
+Commit the changes to your local copy.
+If you have write permission to remote repo,
+push the changes
+Visual Cheat Sheet:
+cheatsheet
+
+
+
+
+Conflict
+
+Conflict occurs if
+
+
+A file changed by two or more people/branch
+And try to push the changes central repository
+And the &#8216;Source Control Software&#8217; can not decide which one should be selected.
+
